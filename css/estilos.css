@@ -1,0 +1,431 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "header" "main" "footer"; }
+
+header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  grid-area: "header";
+  background-color: #647457;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: none;
+  z-index: 1; }
+  header nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: none;
+    width: 100%; }
+    header nav div a {
+      font-size: 30px;
+      list-style: none;
+      text-decoration: none;
+      color: black; }
+    header nav ul {
+      display: flex;
+      gap: 50px;
+      list-style: none; }
+      header nav ul li a {
+        font-size: 25px;
+        text-decoration: none;
+        color: black; }
+      header nav ul li a:hover {
+        font-size: 30px; }
+    header nav a img {
+      width: 40px;
+      height: 40px;
+      display: none; }
+    header nav .bambole:hover {
+      font-size: 60px; }
+
+footer {
+  background-color: #647457;
+  grid-area: "footer";
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: none;
+  text-align: center; }
+  footer div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: center;
+    text-align: center; }
+    footer div a {
+      text-decoration: none;
+      color: black; }
+
+main {
+  padding: 20px;
+  width: 100%;
+  background-color: beige;
+  grid-area: "main";
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  text-align: center; }
+  main .seccionPrincipalInicio {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "img1 img2 img3 img4" "img5 img6 img7 img8";
+    gap: 100px; }
+    main .seccionPrincipalInicio figure {
+      border: 3px solid black;
+      box-shadow: 0px 5px 10px black;
+      color: black;
+      border-radius: 10px;
+      background-color: #647457;
+      height: 250px;
+      width: 200px;
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr; }
+      main .seccionPrincipalInicio figure div {
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        transition: 1s; }
+        main .seccionPrincipalInicio figure div img {
+          height: 200px;
+          width: 100%;
+          border-radius: 10px; }
+      main .seccionPrincipalInicio figure .front {
+        position: static;
+        grid-row: 1/2;
+        grid-column: 1/2;
+        transform: perspective(500px) rotateY(0deg); }
+      main .seccionPrincipalInicio figure .back {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: none;
+        grid-row: 1/2;
+        grid-column: 1/2;
+        transform: perspective(500px) rotateY(180deg); }
+    main .seccionPrincipalInicio figure:hover .front {
+      transform: perspective(500px) rotateY(180deg); }
+    main .seccionPrincipalInicio figure:hover .back {
+      transform: perspective(500px) rotateY(360deg); }
+  main .img1 {
+    grid-area: img1; }
+  main .img2 {
+    grid-area: img2; }
+  main .img3 {
+    grid-area: img3; }
+  main .img4 {
+    grid-area: img4; }
+  main .img5 {
+    grid-area: img5; }
+  main .img6 {
+    grid-area: img6; }
+  main .img7 {
+    grid-area: img7; }
+  main .img8 {
+    grid-area: img8; }
+  main .seccionPrincipalContacto {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: none; }
+    main .seccionPrincipalContacto div {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: none;
+      gap: none; }
+    main .seccionPrincipalContacto form fieldset {
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: none;
+      gap: none; }
+  main .seccionPrincipalNosotros {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: none; }
+    main .seccionPrincipalNosotros div {
+      width: 90%; }
+      main .seccionPrincipalNosotros div img {
+        width: 100%; }
+  main h2 {
+    border: 3px solid black;
+    box-shadow: 0px 5px 10px black;
+    color: black;
+    border-radius: 10px;
+    background-color: #647457; }
+  main .galeria {
+    display: flex;
+    width: 1200px;
+    height: 430px;
+    border: 3px solid black;
+    box-shadow: 0px 5px 10px black;
+    color: black;
+    border-radius: 10px;
+    background-color: #647457; }
+    main .galeria img {
+      width: 0px;
+      flex-grow: 1;
+      object-fit: cover;
+      transition: .5 ease; }
+    main .galeria img:hover {
+      cursor: pointer;
+      width: 300px;
+      opacity: 1;
+      filter: contrast(120%); }
+  main .seccionPrincipalProductos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "img1 img2 img3 img4" "img5 img6 img7 img8" "img9 img10 img11 img12";
+    gap: 100px; }
+    main .seccionPrincipalProductos figure {
+      border: 3px solid black;
+      box-shadow: 0px 5px 10px black;
+      color: black;
+      border-radius: 10px;
+      background-color: #647457;
+      height: 250px;
+      width: 200px;
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr; }
+      main .seccionPrincipalProductos figure div {
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        transition: 1s; }
+        main .seccionPrincipalProductos figure div img {
+          height: 200px;
+          width: 100%;
+          border-radius: 10px; }
+      main .seccionPrincipalProductos figure .front {
+        grid-row: 1/2;
+        grid-column: 1/2;
+        transform: perspective(500px) rotateY(0deg); }
+      main .seccionPrincipalProductos figure .back {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: none;
+        grid-row: 1/2;
+        grid-column: 1/2;
+        transform: perspective(500px) rotateY(180deg); }
+    main .seccionPrincipalProductos figure:hover .front {
+      transform: perspective(500px) rotateY(180deg); }
+    main .seccionPrincipalProductos figure:hover .back {
+      transform: perspective(500px) rotateY(360deg); }
+    main .seccionPrincipalProductos .img1 {
+      grid-area: img1; }
+    main .seccionPrincipalProductos .img2 {
+      grid-area: img2; }
+    main .seccionPrincipalProductos .img3 {
+      grid-area: img3; }
+    main .seccionPrincipalProductos .img4 {
+      grid-area: img4; }
+    main .seccionPrincipalProductos .img5 {
+      grid-area: img5; }
+    main .seccionPrincipalProductos .img6 {
+      grid-area: img6; }
+    main .seccionPrincipalProductos .img7 {
+      grid-area: img7; }
+    main .seccionPrincipalProductos .img8 {
+      grid-area: img8; }
+    main .seccionPrincipalProductos .img9 {
+      grid-area: img9; }
+    main .seccionPrincipalProductos .img10 {
+      grid-area: img10; }
+    main .seccionPrincipalProductos .img11 {
+      grid-area: img11; }
+    main .seccionPrincipalProductos .img12 {
+      grid-area: img12; }
+
+@media (max-width: 1024px) {
+  main .seccionPrincipalInicio {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "img1 img2 img3" "img4 img5 img6" "img7 img8 img9" "img10 img11 img12";
+    gap: 100px; }
+  main .seccionPrincipalProductos {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "img1 img2 img3" "img4 img5 img6" "img7 img8 img9" "img10 img11 img12";
+    gap: 100px; }
+  main .galeria {
+    width: 800px;
+    height: 200px; }
+    main .galeria .img6 {
+      display: none; }
+  header {
+    position: static;
+    align-items: center;
+    text-align: center; }
+    header div a {
+      font-size: 20px; }
+    header nav ul {
+      justify-content: space-between;
+      padding-left: 30px; }
+      header nav ul li a {
+        font-size: 20px; } }
+
+@media (max-width: 800px) {
+  main .seccionPrincipalInicio {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "img1 img2" "img3 img4" "img5 img6" "img7 img8" "img9 img10" "img11 img12"; }
+  main .seccionPrincipalProductos {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "img1 img2" "img3 img4" "img5 img6" "img7 img8" "img9 img10" "img11 img12"; }
+  main .seccionPrincipalContacto {
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px; }
+  main .seccionPrincipalUbicacion iframe {
+    width: 100%; }
+  main .galeria {
+    width: 475px; }
+    main .galeria img:hover {
+      width: 200pxpx; }
+    main .galeria .img5 {
+      display: none; }
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; }
+    header nav {
+      width: 90%;
+      /*display: grid;
+            justify-content: space-between;
+            align-items: center;
+            grid-template-columns: repeat(2,max-content);*/
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center; }
+      header nav div {
+        width: 90%;
+        display: grid;
+        justify-content: space-between;
+        align-items: center;
+        grid-template-columns: repeat(2, max-content); }
+        header nav div a {
+          font-size: 2.5rem;
+          z-index: 1; }
+      header nav ul {
+        flex-direction: column;
+        display: grid;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        /*
+                 position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                padding: 0;
+                display: grid;
+                align-content: center;
+                gap: 2em;
+                padding-left: 5%;
+                font-size: 1.2rem;
+                letter-spacing: 2px;*/
+        transform: var(--estadoMenu);
+        transform: .3s transform; }
+      header nav a img {
+        display: block; }
+      header nav .men, header nav .close {
+        cursor: pointer;
+        grid-column: 2/3;
+        grid-row: 1/2;
+        transition: .4s transform; }
+  .nav {
+    --estadoClose:scale(0);
+    --estadoHambur:scale(1);
+    --estadoMenu:translate(-100%);
+    height: 100px; }
+  .nav:target {
+    --estadoClose:scale(1);
+    --estadoHambur:scale(0);
+    --estadoMenu:translate(0);
+    height: 400px; }
+  .men {
+    transform: var(--estadoHambur); }
+  .close {
+    transform: var(--estadoClose); }
+  footer {
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px; }
+  .eslogan {
+    order: 1; }
+  .redes {
+    order: 2; }
+  .contacto {
+    order: 3; }
+  .ubicacion {
+    order: 4; } }
+
+@media (max-width: 475px) {
+  main .seccionPrincipalInicio {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-areas: "img1" "img2" "img3" "img4" "img5" "img6" "img7" "img8" "img9" "img10" "img11" "img12"; }
+  main .seccionPrincipalProductos {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-areas: "img1" "img2" "img3" "img4" "img5" "img6" "img7" "img8" "img9" "img10" "img11" "img12"; }
+  main .galeria {
+    width: 300px; }
+    main .galeria img:hover {
+      width: 150px; }
+    main .galeria .img4 {
+      display: none; }
+  main .seccionPrincipalUbicacion iframe {
+    width: 300px; } }
+
+* {
+  font-family: 'Archivo', sans-serif;
+  font-family: 'Rajdhani', sans-serif; }

@@ -1,0 +1,35 @@
+@media (max-width:475px){
+    
+    main{
+        .seccionPrincipalInicio{
+            grid-template-columns: 1fr ;
+            grid-template-rows: repeat(12,1fr) ; 
+            grid-template-areas : "img1" "img2" "img3"
+             "img4" "img5" "img6" "img7" "img8" "img9"
+              "img10" "img11" "img12";
+        }
+        .seccionPrincipalProductos{
+            grid-template-columns: 1fr ;
+            grid-template-rows: repeat(12,1fr) ; 
+            grid-template-areas : "img1" "img2" "img3"
+             "img4" "img5" "img6" "img7" "img8" "img9"
+              "img10" "img11" "img12";
+        }
+        .galeria{
+            width: 300px;
+            img:hover{
+                width: 150px;
+            }
+            .img4{
+                display: none;
+            }
+           }
+           .seccionPrincipalUbicacion{
+            iframe{
+                width: 300px;
+            }
+           }
+    }
+
+
+}

@@ -1,0 +1,50 @@
+header{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    grid-area: "header";
+    background-color: $background-hyf;
+    @include flex(row,nowrap,space-between,center,none);
+    z-index: 1;
+    nav{
+        @include flex(row,nowrap,space-around,center,none);
+        width: 100%;
+
+
+        div{
+            a{
+                font-size: 30px;
+                list-style: none;
+                text-decoration: none;
+                color: black;
+            }
+
+        }   
+        ul{
+            display: flex;
+            gap: 50px;
+            list-style: none;
+            li{
+                a{
+                    font-size: 25px;
+                    text-decoration: none;
+                    color: black;
+                }
+                a:hover{
+                    font-size: 30px;
+                }
+            }
+        }
+        a{
+            img{
+                width: 40px;
+                height: 40px;
+                display: none;
+            }
+        }
+        .bambole:hover{
+            font-size: 60px;
+        }
+    }
+}
+
