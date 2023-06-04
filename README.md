@@ -1,4 +1,4 @@
-###Proyecto Bambole - Tienda de Ropa | Curso Desarrollo Web - CoderHouse | Realizado por Juan Pablo Bravo 
+### Proyecto Bambole - Tienda de Ropa | Curso Desarrollo Web - CoderHouse | Realizado por Juan Pablo Bravo 
 
 ¡Bienvenidos a Bambole! Somos una tienda de ropa en línea comprometida en brindarte las últimas tendencias de moda que se adaptan a tu estilo personal. Nuestro eslogan es "La moda pasa, tu estilo jamás", y nos esforzamos por ayudarte a expresarte a través de la moda de una manera única y auténtica.
 
