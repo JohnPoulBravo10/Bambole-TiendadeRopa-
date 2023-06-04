@@ -327,10 +327,12 @@ main {
     main .galeria .img5 {
       display: none; }
   header {
+    display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    width: 100%; }
+    width: 100%;
+    gap: 20px; }
     header nav {
       width: 90%;
       /*display: grid;
@@ -384,12 +386,12 @@ main {
   .nav {
     --estadoClose:scale(0);
     --estadoHambur:scale(1);
-    --estadoMenu:translate(-100%);
+    --estadoMenu:translate(0);
     height: 100px; }
   .nav:target {
     --estadoClose:scale(1);
     --estadoHambur:scale(0);
-    --estadoMenu:translate(0);
+    --estadoMenu:translate(-100%);
     height: 400px; }
   .men {
     transform: var(--estadoHambur); }
