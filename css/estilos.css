@@ -318,8 +318,8 @@ main {
     flex-direction: column;
     justify-content: space-around;
     gap: 20px; }
-  main .seccionPrincipalUbicacion iframe {
-    width: 100%; }
+  main .seccionUbicacion iframe {
+    width: 700px; }
   main .galeria {
     width: 475px; }
     main .galeria img:hover {
@@ -425,7 +425,7 @@ main {
       width: 150px; }
     main .galeria .img4 {
       display: none; }
-  main .seccionPrincipalUbicacion iframe {
+  main .seccionUbicacion iframe {
     width: 300px; } }
 
 * {
