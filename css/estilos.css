@@ -328,23 +328,23 @@ main {
       display: none; }
   header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     gap: 20px; }
     header nav {
-      width: 90%;
+      width: 100%;
       /*display: grid;
             justify-content: space-between;
             align-items: center;
             grid-template-columns: repeat(2,max-content);*/
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      flex-direction: row;
+      justify-content: space-around;
       align-items: center; }
       header nav div {
-        width: 90%;
+        width: 100%;
         display: grid;
         justify-content: space-between;
         align-items: center;
@@ -355,7 +355,7 @@ main {
       header nav ul {
         flex-direction: column;
         display: grid;
-        width: 90%;
+        width: 100%;
         justify-content: center;
         align-items: center;
         align-content: center;
@@ -386,13 +386,13 @@ main {
   .nav {
     --estadoClose:scale(0);
     --estadoHambur:scale(1);
-    --estadoMenu:translate(0);
+    --estadoMenu:translate(-100%);
     height: 100px; }
   .nav:target {
     --estadoClose:scale(1);
     --estadoHambur:scale(0);
-    --estadoMenu:translate(-100%);
-    height: 400px; }
+    --estadoMenu:translate(0);
+    height: 450px; }
   .men {
     transform: var(--estadoHambur); }
   .close {
